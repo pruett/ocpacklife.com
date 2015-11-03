@@ -1,0 +1,23 @@
+{.section collection}
+
+  <!-- Create index sections -->
+
+  {.repeated section collections}
+  <div id="{urlId}" class="index-section{.section mainContent}{.or} empty{.end}" data-url-id="{urlId}">
+    <div class="promoted-gallery-wrapper"></div>
+    {.section mainImage}
+    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
+      <div class="color-overlay"></div>
+      <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} /></figure>
+      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
+    </div>
+    {.end}
+    <div class="index-section-wrapper page-content">
+      <div class="content-inner{.section mainContent} has-content{.end}" data-content-field="main-content">
+        {mainContent}
+      </div>
+    </div>
+  </div>
+  {.end}
+
+{.end}
