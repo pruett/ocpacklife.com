@@ -16,7 +16,7 @@
     "newsletter-style" : "Light",
     "banner-button-font-font-size" : "15px",
     "subnav-title-font-font-style" : "normal",
-    "hide-blog-sidebar" : "true",
+    "hide-blog-sidebar" : "false",
     "prodPerRow" : "3",
     "nav-button-font-text-decoration" : "none",
     "banner-heading-font-font-size" : "68px",
