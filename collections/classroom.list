@@ -1,4 +1,4 @@
-<div class="blog-list">
+<div class="ClassroomSubjects">
 
   {.repeated section items}
   <article class="entry h-entry {@|item-classes}" id="article-{id}" data-item-id="{id}">
@@ -91,5 +91,3 @@
   {.end}
 
 </div>
-
-

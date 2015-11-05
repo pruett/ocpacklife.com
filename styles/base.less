@@ -354,6 +354,7 @@ blockquote {
 
 .header-inner,
 .footer-inner,
+.banner-ticker-inner,
 .pre-footer-inner {
   width: auto;
   margin: auto;
@@ -361,6 +362,7 @@ blockquote {
 }
 
 .footer-inner,
+.banner-ticker-inner,
 .pre-footer-inner { max-width: @pageWidth; }
 
 #header {
@@ -387,6 +389,7 @@ blockquote {
 
 .header-inner,
 .footer-inner,
+.banner-ticker-inner,
 .pre-footer-inner .sqs-layout {
   .border-box;
 }
@@ -406,12 +409,13 @@ blockquote {
 .footer-inner{
   padding: (@sitePadding * 2) @sitePadding;
 }
-.pre-footer-inner .sqs-layout{
+.pre-footer-inner .sqs-layout, .banner-ticker-inner .sqs-layout {
   padding: @sitePadding;
 }
-.pre-footer-inner .sqs-layout.empty {
+.pre-footer-inner .sqs-layout.empty, .banner-ticker-inner .sqs-layout.empty {
   padding: 0 @sitePadding;
 }
+body:not(.sqs-edit-mode) .banner-ticker-inner .sqs-layout.empty {max-height: 0;}
 body:not(.sqs-edit-mode) .pre-footer-inner .sqs-layout.empty {max-height: 0;}
 
 .transparent-header #header {
@@ -429,10 +433,23 @@ body:not(.has-banner-image),
   }
 }
 
+#bannerTicker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: @bannerTickerBgColor;
+  .font-smoothing(@bannerTickerBgColor);
+  color: @bannerTickerTextColor;
+  h1, h2, h3 { color: @bannerTickerTextColor; }
+}
+
 #preFooter {
   background-color: @preFooterBgColor;
   .font-smoothing(@preFooterBgColor);
 }
+
 #preFooter {
   color: @preFooterTextColor;
   h1,

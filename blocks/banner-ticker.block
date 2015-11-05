@@ -1,0 +1,6 @@
+<div id="bannerTicker">
+  <div class="banner-ticker-inner">
+    <squarespace:block-field id="BannerTickerBlocks" columns="12" label="Banner Ticker Content" />
+  </div>
+</div>
+
